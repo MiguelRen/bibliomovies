@@ -5,4 +5,9 @@ import { fetchMovies } from './api'
 import {displayMovies} from './ui'
 
 
+const result = await fetchMovies('batman')
+
 createApp(App).mount('#app')
+
+
+
