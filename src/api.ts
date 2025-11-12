@@ -8,7 +8,7 @@ export async function fetchMovies(query: string): Promise<Movie[]> {
         const url = `https://www.omdbapi.com/?apikey=${apiKey}&s=${encodeURIComponent(
             query
         )}`
-
+ 
         const res = await fetch(url)
         if (!res.ok) throw new Error(`Network error: ${res.status} ${res.statusText}`)
 
