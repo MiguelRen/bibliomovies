@@ -1,8 +1,11 @@
 import type { Movie } from './interfaces/types.js'
+import { fetchMovies } from './api.js'
 
 export function displayMovies(movies: Movie[]) {
+	
+	
 	const containerId = 'results'
-
+	
 	// Find or create the results container
 	let container = document.getElementById(containerId)
 	if (!container) {
