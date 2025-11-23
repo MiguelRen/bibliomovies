@@ -7,7 +7,7 @@
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
+    "module": "esnext",
     "target": "esnext",
     "types": [],
     // For nodejs:
@@ -23,7 +23,8 @@
     // Stricter Typechecking Options
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
-
+    "lib": ["esnext","dom"],
+    "moduleResolution": "bundler",
     // Style Options
     // "noImplicitReturns": true,
     // "noImplicitOverride": true,
@@ -33,8 +34,14 @@
     // "noPropertyAccessFromIndexSignature": true,
 
     // Recommended Options
+  
+    "include": ["src/**/*.ts","src/**/*.vue","src/**/*.tsx","src/**/*.d.ts"],
+   "noImplicitAny": true,
+    "noImplicitReturns": true,
     "strict": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
+    "rootDir": "src",
+    "outDir": "dist",
     "verbatimModuleSyntax": true,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
